@@ -22,6 +22,7 @@ module Filters
     def pull_options
       options = { state: 'open', sort: 'updated', direction: 'asc' }
       options[:base] = input.source.base if input.source.base
+      options[:head] = input.source.head if input.source.head
       options
     end
   end
